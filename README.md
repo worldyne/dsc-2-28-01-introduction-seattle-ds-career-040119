@@ -1,61 +1,42 @@
 
-# Introduction
+# Networks - Introduction
 
 ## Introduction
-This lesson summarizes the topics we'll be covering in section 28 and why they'll be important to you as a data scientist.
+
+In this section, you'll investigate a new data structure: networks! Networks are a useful data structure to map a range of applications from driving directions to social networks.
 
 ## Objectives
+
 You will be able to:
-* Understand and explain what is covered in this section
-* Understand and explain why the section will help you to become a data scientist
+    
+* Talk about networks 
+* Outline key concepts to be covered in the section
 
-## Graph Theory
+## Network Graphs
 
-And now for something completely different! There are certain classes of data science problems where building and then traversing a graph can be a very powerful way to solve them. Not just for analysing social networks, but for anomaly detection, recommendation systems and geospacial data (e.g. calculating shipping routes) graph based approaches can be a really useful tool. In this section, we're going to provide an introduction to graphs that you can use as a starting point if you want to use such techniques in the future.
+Networks are another way of representing data that you have yet to fully investigate. In their most simple case, a network contains **nodes** connected by **edges** like this:
+<img src="images/graph.png">
 
-### Introduction to Graph Theory
-
-We start by providing a basic introduction to what a graph is - a series of nodes (sometimes called vertices or points) and edges (sometimes called arcs or lines). We also introduce some important properties of graphs such as directionality (I know of ex-President Obama, but he may not have heard of me!) and weight (anything from the strength of a friendship to the time it takes to drive between two cities).
-
-### Graphs in Python with NetworkX
-
-One of the most common packages for working with graphs in Python is NetworkX. In this lesson, we look at how to create and visualize graphs using NetworkX.
-
-### Graph Data I/O
-
-From there, we look at two common representations for serializing graphs - edge lists and adjacency matrices so you can load graph data into NetworkX.
-
-### Implementing and Visualizing Graphs with NetworkX
-
-We then provide you with a lab to pull together all the steps you learned in the previous lessons to get some practice creating and visualizing graphs using NetworkX and Matplotlib.
-
-### Graph Theory: Simple and Shortest Paths
-
-The real power of Graphs as a way of modeling data is that there are a huge number of powerful algorithms for performing analyses on graphs. In this lesson we introduce the idea of the simple and shortest paths for undirected, directed and weighted graphs and introduce Djikstras algorithm for calculating the shortest path between two nodes.
-
-### Network Dynamics: Node Centrality
-
-Another way of modeling graph data is to try to identify network centrality (in a social graph, think of people who have a *lot* of friends). In this lesson we introduce a number of measures for analysing graph data including degree, closeness, betweenness and eigenvector centrality measures.
-
-### Network Dynamics: Bipartite Graphs
-
-A bipartite graph is one in which every edge connects from one set to the other but no edge connects two nodes within the same set. In this lesson we introduce bipartite graphs and explain how measures of centrality work for such graphs.
-
-### Network Connectivity: Community Detection
-
-Community detection allows us to look at subsets of the nodes and edges within a graph (subgraphs) to find communities (networks which are more densely interconnected) within a larger graph. In this section we look at various techniques such as the Girvan-Newman algorithm for detecting communities within graphs. 
-
-### Social Network Analysis: Ego Networks
-
-Next up we introduce the island method and the idea of ego networks for analysing social networks.
-
-### Amazon Recommendation System 
-
-Finally, we end up the section by asking you to create a book recommendation system using an Amazon co-purchase data set.
+Nodes represent some object such as people, languages, countries, or tags, to name a few. The relationships between these objects are the edges between them. For example, later in this section you'll investigate the relationship of various technology tags on the popular website stackoverflow.com. One potential network visualization of this data looks like this:
+<img src="images/stackoverflow_clusters.png">
 
 
+## Path Searching
+
+One important idea in network analysis are path searching algorithms. Finding the shortest path between two nodes is a foundational concept for creating a distance metric which can then be used to conduct more advanced analyses. Mapping applications such as Google Maps, Apple Maps, Waze or Uber are also natural applications for path searching algorithms. In this section, you'll investigate Dijkstra's algorithm for finding the shortest path between two points, coding it from scratch using python yourself.
+
+## Centrality
+
+Once you've corralled the concept of path searching, you'll then go on to investigate properties of nodes and edges. Centrality is a key concept in this, helping to determine which nodes are most influential to a network, or hold pivotal positions in connecting the network.
+
+## Cliques and Clustering
+
+Moving from the study of single objects nodes and edges within the network, you'll then start to investigate larger structures. With this, you'll investigate the concept of cliques and clusters in order to subdivide a network into smaller groups. Natural applications of this including sub-setting social networks into groups or categorizing items such as books or languages.
+
+## Recommendation Systems
+
+To round out this section, you'll investigate how networks can be used to fuel recommendation systems, a popular and exciting topic. With this, you'll work on recommending amazon products to customers.
 
 ## Summary
 
-Once you know about graphs as a modeling technique, you'll start to see them everywhere. In this section we give you the tools to start to model data using a range of graph based algorithms.
-
+Get ready to dive into the exciting realm of networks! In this section, you'll get to play around with a range of datasets from twitter, Game of Thrones and the Amazon Marketplace!
